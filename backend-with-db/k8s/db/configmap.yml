@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+  namespace: backend-with-db
+data:
+  POSTGRES_DB: itemsdb
