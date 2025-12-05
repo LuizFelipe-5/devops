@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: hello-replicaset
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-replicaset
+  template:
+    metadata:
+      labels:
+        app: hello-replicaset
+    spec:
+      containers:
+        - name: hello-replicaset
+          image: luizfelipems5/hello-spring:1.0
+          ports:
+            - containerPort: 80
